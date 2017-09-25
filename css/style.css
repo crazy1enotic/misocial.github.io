@@ -1,0 +1,350 @@
+/* Fonts	*/
+@import url('https://fonts.googleapis.com/css?family=Maven+Pro:400,500,700,900');
+
+/*	Header */
+.main-header {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	height: 100vh;
+	min-height: 600px;
+	position: relative;
+	background: url(../img/main-bg.jpg) no-repeat center;
+	background-size: cover;
+	color: #fff;
+}
+.main-overlay,
+.call-to-action-overlay {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	opacity: .8;
+	z-index: 0;
+	background-image: -moz-linear-gradient( 150deg, rgb(136, 211, 206) 0%, rgb(110, 69, 226) 100% );
+	background-image: -webkit-linear-gradient( 150deg, rgb(136, 211, 206) 0%, rgb(110, 69, 226) 100% );
+	background-image: -ms-linear-gradient( 150deg, rgb(136, 211, 206) 0%, rgb(110, 69, 226) 100% );
+}
+
+/*	Logo + menu	*/
+.header {
+	display: flex;
+	height: 10vh;
+	justify-content: space-between;
+	align-items: center;
+	position: relative;
+	z-index: 1;
+	width: 90%;
+}
+.menu {
+	width: 70%;
+}
+.menu ul,
+.footer-menu ul {
+	display: flex;
+	justify-content: space-around;
+}
+.menu-link,
+.footer-menu-link {
+	line-height: 1.036em;
+	color: #fff;
+	text-transform: capitalize;
+}
+.menu-link.active,
+.menu-link:hover {
+	border-bottom: 1px solid #fff;
+	padding-bottom: 10px;
+}
+
+/*	Menu for middle screen	*/
+.m-menu-link {
+	display: none;
+	color: #fff;
+	font-size: 3em;
+}
+.m-menu {
+	display: flex;
+	flex-direction: column;
+	-ms-align-items: center;
+	align-items: center;
+	justify-content: center;
+	margin: 0;
+	padding: 0;
+	position: fixed;
+	right: 0;
+	top: 0;
+	height: 100vh;
+	width: 100%;
+	font-size: 3em;
+	line-height: 2em;
+	background-color: #6e45e2;
+	z-index: 990;
+	transition: .2s;
+	transform: translateX(100%);
+}
+.m-menu__active {
+	transform: translateX(0%);
+}
+.close-menu {
+	position: fixed;
+	top: 0;
+	right: .5em;
+	font-size: 2em;
+	font-weight: 900;
+	color: #fff;
+}
+.close-menu:hover {
+	cursor: pointer;
+}
+
+
+.upper {
+	text-transform: uppercase;
+}
+.get-started-btn,
+.footer-get-started {
+	margin-left: 60px;
+	border: 1px solid #fff;
+	border-radius: 100px;
+	padding: 10px 20px;
+	text-transform: uppercase;
+}
+.get-started-btn:hover {
+	background-color: #d4d7de;
+	color: #5e5edf;
+}
+
+/*	Slogan	*/
+.main-text,
+.table-header {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	z-index: 1;
+	text-align: center;
+}
+.main-text span::before,
+.table-header span::before {
+	content: '';
+	width: 20px;
+	height: 1px;
+	background-color: #fff;
+	display: inline-block;
+	vertical-align: middle;
+	margin-right: 10px;
+}
+.main-text span::after,
+.table-header span::after {
+	content: '';
+	width: 20px;
+	height: 1px;
+	background-color: #fff;
+	display: inline-block;
+	vertical-align: middle;
+	margin-left: 10px;
+}
+
+/*	Button down	*/
+.main-arrow {
+	display: flex;
+	justify-content: center;
+	position: relative;
+	z-index: 2;
+	height: 15vh;
+	align-items: center;
+}
+.arrow-down {
+	width: 50px;
+	height: 50px;
+	background-color: #fff;
+	text-align: center;
+	line-height: 55px;
+	border-radius: 50%;
+	box-shadow: 0 0 18.69px 2.31px rgba(204, 204, 223, .5);
+}
+
+/*	Content */
+.table {
+	background-color: #f9fafc;
+	border-top: 1px solid #d7dbe8;
+}
+
+/*	Table header	*/
+.table-header {
+	margin: 65px auto 85px;
+}
+.table-header span,
+.price-tag span {
+	color: #9fa4af;
+}
+.table-header span::before {
+	width: 25px;
+	background-color: #6e45e2;
+}
+.table-header span::after {
+	width: 25px;
+	background-color: #6e45e2;
+}
+.table-header h2,
+.price-tag h4,
+.call-to-action h4 {
+	text-transform: none;
+	font-size: 3.75em;
+	color: #4f4f6f;
+}
+.table-header p,
+.price-tag p {
+	width: 455px;
+	color: #9fa4af;
+}
+
+/*	Price tags	*/
+.price-tags {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	margin-bottom: 150px;
+}
+.price-tag {
+	display: flex;
+	justify-content: space-between;
+	flex-direction: column;
+	align-items: center;
+	background-color: #fff;
+	border-radius: 20px;
+	padding: 20px;
+	width: 350px;
+	text-align: center;
+	transition: .2s;
+}
+.price-tag:hover {
+	cursor: pointer;
+	box-shadow: 0 0 60px 10px rgba(204, 204, 223, .71);
+}
+.price-tag span {
+	margin: 30px auto 10px;
+}
+span.money,
+span.rate {
+	color: #4f4f6f;
+}
+span.money {
+	position: absolute;
+	bottom: 20px;
+	left: -10px;
+}
+.price-tag h4 {
+	margin: 10px;
+	position: relative;
+	font-size: 2.5em;
+}
+.price-tag p {
+	width: 260px;
+}
+.price-btn,
+.ctn-btn {
+	background-color: #fff;
+	border: 1px solid #d7dbe8;
+	border-radius: 100px;
+	font-size: .75em;
+	line-height: 1.143em;
+	font-weight: 700;
+	color: #c2c9db;
+	text-transform: uppercase;
+	padding: 10px 50px 8px;
+	transition: .3s;
+}
+.price-btn:hover,
+.price-btn.active,
+.ctn-btn.active,
+.ctn-btn:hover {
+	background-color: #6e45e2;
+	cursor: pointer;
+	color: #fff;
+	border-color: transparent;
+}
+
+/*	Map	*/
+.call-to-action {
+	position: relative;
+	text-align: center;
+	background: url(../img/map.png) no-repeat center;
+	background-size: cover;
+	padding: 150px;
+	color: #fff;
+}
+.wrapp {
+	position: relative;
+	z-index: 1;
+}
+.call-to-action h4 {
+	margin: 10px auto 20px;
+	color: #fff;
+}
+.ctn-btn {
+	display: inline-block;
+	padding: 0;
+	width: 190px;
+	height: 54px;
+	margin-left: 10px;
+}
+
+/*	Footer	*/
+.footer-wrapper {
+	display: flex;
+	justify-content: center;
+}
+.footer {
+	height: 10vh;
+	width: 90%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.footer-menu {
+	width: 55%;
+}
+.footer-menu-link {
+	color: #6a6a77;
+}
+.footer-menu-link.active,
+.footer.menu-link:hover {
+	color: #6e45e2;
+}
+.footer-get-started {
+	background-color: #6e45e2;
+	color: #fff;
+}
+
+/*	Line	*/
+.line {
+	display: block;
+	width: 90%;
+	height: 1px;
+	margin: 10px auto;
+	background-color: #f2f2f3;
+}
+
+/*	Copytight + social icon	*/
+.legal {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin: 30px 0;
+	padding: 0 5%;
+ }
+.copy,
+.social-links a {
+	font-size: .875em;
+	line-height: 0.679em;
+	color: #6a6a77;
+}
+.social-links a{
+	display: inline-block;
+	margin-right: 10px;
+	font-weight: 400;
+}
